@@ -36,14 +36,14 @@ from userbot.events import register
 # =================== CONSTANT ===================
 PP_TOO_SMOL = "`Gambar Terlalu Kecil`"
 PP_ERROR = "`Gagal Memproses Gambar`"
-NO_ADMIN = "`Lord Bukan Admin:)`"
-NO_PERM = "`Lord Tidak Mempunyai Izin!`"
+NO_ADMIN = "`Maaf Anda Bukan Admin:)`"
+NO_PERM = "`Maaf Anda Tidak Mempunyai Izin!`"
 NO_SQL = "`Berjalan Pada Mode Non-SQL`"
 
 CHAT_PP_CHANGED = "`Berhasil Mengubah Profil Grup`"
 CHAT_PP_ERROR = (
     "`Ada Masalah Dengan Memperbarui Foto,`"
-    "`Mungkin Karna Lord Bukan Admin,`"
+    "`Mungkin Karna Anda Bukan Admin,`"
     "`Atau Tidak Mempunyai Izin.`"
 )
 INVALID_MEDIA = "`Media Tidak Valid`"
@@ -80,7 +80,7 @@ UNMUTE_RIGHTS = ChatBannedRights(until_date=None, send_messages=False)
 @register(outgoing=True, pattern=r"^\.setgpic$")
 async def set_group_photo(gpic):
     if not gpic.is_group:
-        await gpic.edit("`Lord Mohon Lakukan Perintah Ini Di Grup.`")
+        await gpic.edit("`Mohon Lakukan Perintah Ini Di Grup.`")
         return
     replymsg = await gpic.get_reply_message()
     chat = await gpic.get_chat()
@@ -454,13 +454,13 @@ async def ungmoot(un_gmute):
         return
 
     # If pass, inform and start ungmuting
-    await un_gmute.edit("```Membuka Global Mute Pengguna...```")
+    await un_gmute.edit("```Sedang Membuka Global Mute tersebut...```")
 
     if ungmute(user.id) is False:
-        await un_gmute.edit("`Kesalahan! Pengguna Sedang Tidak Di Gmute.`")
+        await un_gmute.edit("`Error! Pengguna Sedang Tidak Di Gmute.`")
     else:
         # Inform about success
-        await un_gmute.edit("```Berhasil! Pengguna Sudah Tidak Lagi Dibisukan```")
+        await un_gmute.edit("```Success! Pengguna Sudah Tidak Lagi Dibisukan```")
         await sleep(3)
         await un_gmute.delete()
 
@@ -497,12 +497,12 @@ async def gspider(gspdr):
     # If pass, inform and start gmuting
     await gspdr.edit("`Berhasil Membisukan Pengguna!`")
     if gmute(user.id) is False:
-        await gspdr.edit("`Kesalahan! Pengguna Sudah Dibisukan.`")
+        await gspdr.edit("`Error! Pengguna Telah Dibisukan.`")
     else:
         if reason:
-            await gspdr.edit(f"**Dibisukan Secara Global!**\n**Alasan:** `{reason}`")
+            await gspdr.edit(f"**Telah Dibisukan Secara Global!**\n**Alasan:** `{reason}`")
         else:
-            await gspdr.edit("`Berhasil Membisukan Pengguna Secara Global!`")
+            await gspdr.edit("`Success Membisukan Pengguna Secara Global!`")
 
         if BOTLOG:
             await gspdr.client.send_message(
@@ -521,7 +521,7 @@ async def rm_deletedacc(show):
     del_status = "`Tidak Menemukan Akun Terhapus, Grup Bersih`"
 
     if con != "clean":
-        await show.edit("`Mencari Akun Hantu/Terhapus/Zombie...`")
+        await show.edit("`Mencari Akun Yang Terhapus/Zombie...`")
         async for user in show.client.iter_participants(show.chat_id):
 
             if user.deleted:
@@ -542,7 +542,7 @@ async def rm_deletedacc(show):
     if not admin and not creator:
         return await show.edit("`Lord Bukan Admin Disini!`")
 
-    await show.edit("`Menghapus Akun Terhapus...\nMohon Menunggu Lord Sedang Dalam Proses`")
+    await show.edit("`Menghapus Akun Terhapus...\nMohon Tunggu Sedang Dalam Proses`")
     del_u = 0
     del_a = 0
 
@@ -553,7 +553,7 @@ async def rm_deletedacc(show):
                     EditBannedRequest(show.chat_id, user.id, BANNED_RIGHTS)
                 )
             except ChatAdminRequiredError:
-                return await show.edit("`Lord Tidak Memiliki Izin Banned Dalam Grup Ini`")
+                return await show.edit("`ERROR! Maaf {username} Tidak Memiliki Izin Banned Dalam Grup Ini`")
             except UserAdminInvalidError:
                 del_u -= 1
                 del_a += 1
@@ -592,7 +592,7 @@ async def get_admin(show):
         ):
             if not user.deleted:
                 link = f'<a href="tg://user?id={user.id}">{user.first_name}</a>'
-                mentions += f"\n➤ {link}"
+                mentions += f"\n✏ {link}"
             else:
                 mentions += f"\nAkun Terhapus <code>{user.id}</code>"
     except ChatAdminRequiredError as err:
@@ -659,7 +659,7 @@ async def kick(usr):
     if not user:
         return await usr.edit("`Tidak Dapat Menemukan Pengguna.`")
 
-    await usr.edit("`Melakukan Kick....`")
+    await usr.edit("`Melakukan Tendangan....`")
 
     try:
         await usr.client.kick_participant(usr.chat_id, user.id)
@@ -715,7 +715,7 @@ async def get_users(show):
     try:
         await show.edit(mentions)
     except MessageTooLongError:
-        await show.edit("Lord, Grup Ini Terlalu Besar Mengunggah Daftar Pengguna Sebagai File.")
+        await show.edit("Grup Ini Terlalu Besar Mengunggah Daftar Pengguna Sebagai File.")
         file = open("daftarpengguna.txt", "w+")
         file.write(mentions)
         file.close()
