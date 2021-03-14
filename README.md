@@ -3,7 +3,7 @@
 
 <p align="center">
   <a href="https://github.com/vckyou/E404NF-UserBot/fork">
-    <img src="https://img.shields.io/github/forks/Zora24/Lord-Userbot?label=Fork&style=social">
+    <img src="https://telegra.ph/file/224ffaf09012f7bbea8dd.jpg">
     
   </a>
   <a href="https://github.com/vckyou/E404NF-UserBot">
