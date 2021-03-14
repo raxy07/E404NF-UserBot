@@ -20,14 +20,14 @@ async def help(event):
         if args in CMD_HELP:
             await event.edit(str(CMD_HELP[args]))
         else:
-            await event.edit("**Maaf Lord, Saya Tidak Punya Perintah Itu ツ**")
+            await event.edit("**Maaf, Saya Tidak Punya Perintah Itu ツ**")
             await asyncio.sleep(200)
             await event.delete()
     else:
         string = ""
         for i in CMD_HELP:
             string += "`" + str(i)
-            string += "`\tꕥ  "
+            string += "`\t֍  "
         await event.edit("**֍ Daftar Perintah Untuk\nE404NF-UserBot:\n\n**"
                          f"✉{string}"
                          "\n⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯")
