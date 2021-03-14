@@ -40,8 +40,10 @@ Repo Yang Dibuat [Vckyou](https://t.me/Vckyouuu) Dari Berbagai Repo Userbot Gith
 Atau Bisa Gabung Ke Grup Lord Userbot -> [TEKAN DISINI](https://t.me/LordUserbot_Group)
 ## <p align="center">DEPLOY E404NF UserBot</p>
 
-[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/vckyou/E404NF-UserBot.git
+<p align="center"><a href="https://heroku.com/deploy?template=https://github.com/vckyou/unknownbot.git"> <img src="https://img.shields.io/badge/Deploy%20Ke%20Heroku-magenta?style=flat&logo=heroku" width="210" height="34.45" /></a></p>
 
+<br>
+</p>
 
 ## Credit
 SPESIAL TERIMAKASI BANYAK KEPADA :
