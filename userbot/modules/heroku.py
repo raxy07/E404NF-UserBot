@@ -182,8 +182,8 @@ async def dyno_usage(dyno):
                 "**➤ Informasi Dyno**:\n"
 
                 f"   ✚ `Penggunaan Dyno` **{app.name}**:\n\n"
-                f"   ❉ **{AppHours} Jam -\n"
-                f"{AppMinutes} Menit  -  {AppPercentage}%**"
+                f"   ❉ **{AppHours} Jam -
+                f"{AppMinutes} Menit  -  {AppPercentage}%**\n"
                 "\n ┟──────────────────────┧\n"
                 "    ✥ `Sisa Dyno Bulan Ini`:\n\n"
                 f"   ➤ **{hours} Jam - {minutes} Menit  "
@@ -204,7 +204,7 @@ async def _(dyno):
         return await dyno.reply(
             "`Please make sure your Heroku API Key, Your App name are configured correctly in the heroku var.`"
         )
-    await dyno.edit("`Sedang Mengambil Logs Lord ヅ`")
+    await dyno.edit("`Sedang Mengambil Logs`")
     with open("logs.txt", "w") as log:
         log.write(app.get_log())
     fd = codecs.open("logs.txt", "r", encoding="utf-8")
@@ -212,7 +212,7 @@ async def _(dyno):
     key = (requests.post("https://nekobin.com/api/documents",
                          json={"content": data}) .json() .get("result") .get("key"))
     url = f"https://nekobin.com/raw/{key}"
-    await dyno.edit(f"`Ini Logs Heroku Anda Lord:`\n\nPaste Ke: [Nekobin]({url})")
+    await dyno.edit(f"`Ini Logs Heroku Anda:`\n\nPaste Ke: [Nekobin]({url})")
     return os.remove("logs.txt")
 
 
