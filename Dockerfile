@@ -4,7 +4,7 @@ FROM vckyou/docker:groovy
 #
 # Clone repo and prepare working directory
 #
-RUN git clone -b Lord-Userbot https://github.com/vckyou/E404NF-UserBot /root/userbot
+RUN git clone -b E404NF-UserBot https://github.com/vckyou/E404NF-UserBot /root/userbot
 RUN mkdir /root/userbot/.bin
 RUN pip install --upgrade pip setuptools
 WORKDIR /root/userbot
