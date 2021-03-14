@@ -29,7 +29,7 @@ async def help(event):
             string += "`" + str(i)
             string += "`\tꕥ  "
         await event.edit("**֍ Daftar Perintah Untuk\nE404NF-UserBot:\n\n**"
-                         f"ꕥ{string}ꕥ"
+                         f"✉{string}"
                          "\n⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯")
         await event.reply(f"\n**Ketik Contoh** `.help afk` **Untuk Informasi Perintah**")
         await asyncio.sleep(1000)
