@@ -6,8 +6,8 @@
     <img src="https://img.shields.io/github/forks/Zora24/Lord-Userbot?label=Fork&style=social">
     
   </a>
-  <a href="https://github.com/Zora24/Lord-Userbot">
-    <img src="https://img.shields.io/github/stars/Zora24/Lord-Userbot?style=social">
+  <a href="https://github.com/vckyou/E404NF-UserBot">
+    <img src="https://img.shields.io/github/stars/vckyou/E404NF-UserBot?style=social">
   </a>
 </p>  
 
