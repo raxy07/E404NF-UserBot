@@ -53,7 +53,7 @@ async def deploy(event, repo, ups_rem, ac_br, txt):
         if HEROKU_APP_NAME is None:
             await event.edit(
                 '`[HEROKU]: Harap Siapkan Variabel` **HEROKU_APP_NAME** `'
-                ' untuk dapat deploy perubahan terbaru dari Lord Userbot.`'
+                ' untuk dapat deploy perubahan terbaru dari E404NF-UserBot.`'
             )
             repo.__del__()
             return
@@ -67,7 +67,7 @@ async def deploy(event, repo, ups_rem, ac_br, txt):
             )
             return repo.__del__()
         await event.edit('`[HEROKU]:'
-                         '\nDyno Lord-Userbot Sedang Dalam Proses, Mohon Menunggu 7-8 Menit`'
+                         '\nDyno E404NF Userbot Sedang Dalam Proses, Mohon Menunggu 7-8 Menit`'
                          )
         ups_rem.fetch(ac_br)
         repo.git.reset("--hard", "FETCH_HEAD")
@@ -91,7 +91,7 @@ async def deploy(event, repo, ups_rem, ac_br, txt):
             await asyncio.sleep(5)
             return await event.delete()
         else:
-            await event.edit("`Lord-Userbot Berhasil Di Deploy!\n" "Restarting, Mohon Menunggu Lord.....`")
+            await event.edit("`E404NF-Userbot Berhasil Di Deploy!\n" "Restarting, Mohon Menunggu.....`")
             await asyncio.sleep(15)
             await event.delete()
 
@@ -115,9 +115,9 @@ async def update(event, repo, ups_rem, ac_br):
     except GitCommandError:
         repo.git.reset("--hard", "FETCH_HEAD")
     await update_requirements()
-    await event.edit('**✥ Lord-Userbot** `Berhasil Di Update!`')
+    await event.edit('**✥ E404NF-Userbot** `Berhasil Di Update!`')
     await asyncio.sleep(1)
-    await event.edit('**✥ Lord-Userbot** `Di Restart....`')
+    await event.edit('**✥ E404NF-Userbot** `Di Restart....`')
     await asyncio.sleep(1)
     await event.edit('`Mohon Menunggu Beberapa Detik Lord ツ`')
     await asyncio.sleep(10)
@@ -126,7 +126,7 @@ async def update(event, repo, ups_rem, ac_br):
     if BOTLOG:
         await event.client.send_message(
             BOTLOG_CHATID, "#BOT \n"
-            "**Lord-Userbot Telah Di Perbarui ツ**")
+            "**E404NF-Userbot Telah Di Perbarui ツ**")
         await asyncio.sleep(100)
         await event.delete()
 
@@ -194,7 +194,7 @@ async def upstream(event):
         return repo.__del__()
 
     if conf is None and force_update is False:
-        changelog_str = f'**✣ Pembaruan Untuk Lord-Userbot [{ac_br}]:\n\n✣ Pembaruan:**\n`{changelog}`'
+        changelog_str = f'**✣ Pembaruan Untuk E404NF-Userbot [{ac_br}]:\n\n✣ Pembaruan:**\n`{changelog}`'
         if len(changelog_str) > 4096:
             await event.edit("`Changelog Terlalu Besar, Lihat File Untuk Melihatnya.`")
             file = open("output.txt", "w+")
@@ -214,12 +214,13 @@ async def upstream(event):
         await event.edit(
             '`Sinkronisasi Paksa Ke Kode Userbot Stabil Terbaru, Harap Tunggu .....`')
     else:
-        await event.edit('`✲ Proses Update Lord-Userbot, Loading....1%`')
-        await event.edit('`✲ Proses Update Lord-Userbot, Loading....20%`')
-        await event.edit('`✲ Proses Update Lord-Userbot, Loading....35%`')
-        await event.edit('`✲ Proses Update Lord-Userbot, Loading....77%`')
-        await event.edit('`✲ Proses Update Lord-Userbot, Updating...90%`')
-        await event.edit('`✲ Proses Update Lord-Userbot, Mohon Menunggu Lord....100%`')
+        await event.edit('`✲ Proses Update E404NF-Userbot, Loading....1%`')
+        await event.edit('`✲ Proses Update E404NF-Userbot, Loading....15%`')
+        await event.edit('`✲ Proses Update E404NF-Userbot, Loading....25%`')
+        await event.edit('`✲ Proses Update E404NF-Userbot, Loading....66%`')
+        await event.edit('`✲ Proses Update E404NF-Userbot, Loading....80%`')
+        await event.edit('`✲ Proses Update E404NF-Userbot, Updating....95%`')
+        await event.edit('`✲ Proses Update E404NF-Userbot, Mohon Menunggu....100%`')
     if conf == "now":
         await update(event, repo, ups_rem, ac_br)
         await asyncio.sleep(10)
@@ -236,7 +237,7 @@ CMD_HELP.update({
     ".update"
     "\nUsage: Untuk Melihat Pembaruan Terbaru Lord-Userbot."
     "\n\n.update now"
-    "\nUsage: Memperbarui Lord-Userbot."
+    "\nUsage: Memperbarui E404NF-Userbot."
     "\n\n.update deploy"
-    "\nUsage: Memperbarui Lord-Userbot Dengan Cara Deploy Ulang."
+    "\nUsage: Memperbarui E404NF-Userbot Dengan Cara Deploy Ulang."
 })
