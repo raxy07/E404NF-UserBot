@@ -133,10 +133,10 @@ async def filters_active(event):
     filters = get_filters(event.chat_id)
     for filt in filters:
         if transact == "`Tidak Ada Filter Apapun Disini.`":
-            transact = "**❃ Daftar Filter Lord Yang Aktif Disini:**\n"
-            transact += " ➥ `{}`\n".format(filt.keyword)
+            transact = "**ꕥ Daftar Filter Yang Aktif Disini:**\n"
+            transact += " ➽ `{}`\n".format(filt.keyword)
         else:
-            transact += " ➥ `{}`\n".format(filt.keyword)
+            transact += " ➽ `{}`\n".format(filt.keyword)
 
     await event.edit(transact)
 
@@ -144,7 +144,7 @@ async def filters_active(event):
 CMD_HELP.update({
     "filter":
     "`.filters`\
-    \nUsage: Melihat filter lord userbot yang aktif di obrolan.\
+    \nUsage: Melihat filter yang aktif di obrolan.\
     \n\n`.filter` <keyword> <balasan> atau balas ke pesan ketik .filter <keyword>\
     \nUsage: Membuat filter di obrolan.\
     \nBot Akan Membalas Jika Ada Yang Menyebut 'keyword' yang dibuat.\
