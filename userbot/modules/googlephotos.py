@@ -174,11 +174,11 @@ async def upload_google_photos(event):
     async with aiohttp.ClientSession() as session:
         headers = {
             "Content-Length": "0",
-            "Lord-Goog-Upload-Command": "start",
-            "Lord-Goog-Upload-Content-Type": mime_type,
-            "Lord-Goog-Upload-File-Name": file_name,
-            "Lord-Goog-Upload-Protocol": "resumable",
-            "Lord-Goog-Upload-Raw-Size": str(file_size),
+            "E404NF-Goog-Upload-Command": "start",
+            "E404NF-Goog-Upload-Content-Type": mime_type,
+            "E404NF-Goog-Upload-File-Name": file_name,
+            "E404NF-Goog-Upload-Protocol": "resumable",
+            "E404NF-Goog-Upload-Raw-Size": str(file_size),
             "Authorization": "Bearer " + creds.access_token,
         }
         # Step 1: Initiating an upload session
