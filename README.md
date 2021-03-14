@@ -1,4 +1,3 @@
-<a href="https://cooltext.com"><img src="https://images.cooltext.com/5501763.gif" width="473" height="82" alt="E404NOTFOUND" /></a>
 
   </a>
   <a href="https://github.com/vckyou/E404NF-UserBot">
