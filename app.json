@@ -1,5 +1,5 @@
 {
-  "name": "Lord-Userbot",
+  "name": "E404NF-UserBot",
   "description": "[E404NF-UserBot] USERBOT KHUSUS YANG DIGUNAKAN UNTUK BERSENANG-SENANG DI TELEGRAM.",
   "logo": "https://telegra.ph/file/85f844efabbb7daa3af02.jpg",
   "keywords": [
@@ -9,7 +9,7 @@
     "modular",
     "productivity"
   ],
-  "repository": "https://github.com/vckyou-E404NF-UserBot",
+  "repository": "https://github.com/vckyou/E404NF-UserBot",
   "telegram": "https://t.me/Vckyouuu",
   "success_url": "https://t.me/VckyouuBitch",
   "stack": "container",
