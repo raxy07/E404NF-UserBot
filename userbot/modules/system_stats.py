@@ -1,4 +1,4 @@
-# System Stats Lord-Userbot
+# System Stats E404NF-Userbot
 
 import asyncio
 from asyncio import create_subprocess_exec as asyncrunapp
@@ -14,7 +14,7 @@ import time
 from datetime import datetime
 import psutil
 
-from userbot import ALIVE_LOGO, ALIVE_NAME, BOT_VER, LORD_TEKS_KUSTOM, CMD_HELP, StartTime, UPSTREAM_REPO_BRANCH, bot
+from userbot import ALIVE_LOGO, ALIVE_NAME, BOT_VER, ERROR_TEKS_KUSTOM, CMD_HELP, StartTime, UPSTREAM_REPO_BRANCH, bot
 from userbot.events import register
 
 
@@ -159,9 +159,9 @@ async def bot_ver(event):
         revout = str(stdout.decode().strip()) + str(stderr.decode().strip())
 
         await event.edit(
-            "**☛**Lord-Userbot Versi:** \n "
+            "**➣**E404NF-Userbot Versi:** \n "
             f"{verout}"
-            "\n**☛**Revisi:**\n "
+            "\n**➣**Revisi:**\n "
             f"{revout}"
         )
     else:
@@ -226,7 +226,7 @@ async def amireallyalive(alive):
         f" **┗┓LORD USERBOT┏┛** \n"
         f"\n__**{LORD_TEKS_KUSTOM}**__\n"
         f"**━━━━━━━━━━━━━━━━━━━━**\n"
-        f"**♛ Lord** \n"
+        f"**♛ 𝐄𝐑𝐑𝐎𝐑** \n"
         f" ➥ `{DEFAULTUSER}` \n"
         f"**♛ Username** \n"
         f" ➥ `@{user.username}` \n"
@@ -261,16 +261,16 @@ async def amireallyalive(alive):
     user = await bot.get_me()
     await get_readable_time((time.time() - StartTime))
     output = (
-        f"**▬▬▬▬▬▬❙۩♛۩❙▬▬▬▬▬▬**\n"
-        f"     **♕ LORD USERBOT ♕** \n\n"
-        f"❃ **Lord**     \n   ➥ `{DEFAULTUSER}` \n"
-        f"❃ **Username** \n   ➥ `@{user.username}` \n"
-        f"❃ **Telethon** \n   ➥ `Versi {version.__version__}` \n"
-        f"❃ **Python**   \n   ➥ `Versi {python_version()}` \n"
-        f"❃ **Versi Bot**\n   ➥ `{BOT_VER}` \n"
-        f"❃ **Modul**    \n   ➥ `{len(modules)}` \n\n"
-        f"❃ **Repo Userbot:** [Lord-Userbot](https://github.com/Zora24/Lord-Userbot)\n❃ **Grup Userbot: **[Tekan](t.me/LordUserbot_Group)\n❃ **Pemilik:** [Alvin](t.me/liualvinas)\n"
-        f"**▬▬▬▬▬▬❙۩★۩❙▬▬▬▬▬▬**")
+        f"**▬▬▬▬▬▬❙┍─☫─┑❙▬▬▬▬▬▬**\n"
+        f"     **♕ 𝐄𝟒𝟎𝟒𝐍𝐅-𝐔𝐒𝐄𝐑𝐁𝐎𝐓 ♕** \n\n"
+        f"➽ **Name**     \n   ➥ `{DEFAULTUSER}` \n"
+        f"➽ **Username** \n   ➥ `@{user.username}` \n"
+        f"➽ **Telethon** \n   ➥ `Versi {version.__version__}` \n"
+        f"➽ **Python**   \n   ➥ `Versi {python_version()}` \n"
+        f"➽ **Versi Bot**\n   ➥ `{BOT_VER}` \n"
+        f"➽ **Modul**    \n   ➥ `{len(modules)}` \n\n"
+        f"➽ **Repo Userbot:** [E404NF-Userbot](https://github.com/vckyou/E404NF-UserBot)\n❃ **Grup Userbot: **[Tekan](t.me/LordUserbot_Group)\n❃ **Pemilik:** [Vcky](t.me/Vckyouuu)\n"
+        f"**▬▬▬▬▬▬❙┗─☫─┛❙▬▬▬▬▬▬**")
     if ALIVE_LOGO:
         try:
             logo = ALIVE_LOGO
@@ -296,17 +296,17 @@ async def amireallyalive(alive):
     user = await bot.get_me()
     await get_readable_time((time.time() - StartTime))
     output = (
-        f"**♕ LORD USERBOT** \n"
-        f"┏━━━━━━━━━━━━━━━━━━━ \n"
-        f"┣|• `Lord     :`{DEFAULTUSER} \n"
-        f"┣|• `Username :`@{user.username} \n"
-        f"┣|• `Telethon :`Ver {version.__version__} \n"
-        f"┣|• `Python   :`Ver {python_version()} \n"
-        f"┣|• `Branch   :`{UPSTREAM_REPO_BRANCH} \n"
-        f"┣|• `Bot Ver  :`{BOT_VER} \n"
-        f"┣|• `Modules  :`{len(modules)} Modules \n"
-        f"┗━━━━━━━━━━━━━━━━━━━ \n\n"
-        f"[Repo](https://github.com/Zora24/Lord-Userbot) | [Grup Support](t.me/LordUserbot_Group) | [Owner](t.me/liualvinas)")
+        f"   **☫ 𝐄𝟒𝟎𝟒𝐍𝐅-𝐔𝐒𝐄𝐑𝐁𝐎𝐓 ☫** \n"
+        f" ▬▬▬▬▬▬❙┍─☫─┑❙▬▬▬▬▬▬ \n"
+        f"➥ `Name     :`{DEFAULTUSER} \n"
+        f"➨ `Username :`@{user.username} \n"
+        f"➨ `Telethon :`Ver {version.__version__} \n"
+        f"➨ `Python   :`Ver {python_version()} \n"
+        f"➨ `Branch   :`{UPSTREAM_REPO_BRANCH} \n"
+        f"➨ `Bot Ver  :`{BOT_VER} \n"
+        f"➨ `Modules  :`{len(modules)} Modules \n"
+        f" ▬▬▬▬▬▬❙┗─☫─┛❙▬▬▬▬▬▬ \n\n"
+        f"[Repo](https://github.com/vckyou/E404NF-Userbot) | [Grup Support](t.me/LordUserBot_Group) | [Owner](t.me/Vckyouuu)")
     if ALIVE_LOGO:
         try:
             logo = ALIVE_LOGO
