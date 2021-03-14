@@ -173,9 +173,9 @@ async def _(event):
             await asyncio.sleep(animation_interval)
 
             await event.edit(animation_chars[i % 6])
-# Alvin Imut
-# Alvin Gans
-# Lord
+# vcky ganteng
+# vcky gans
+# e404nf
 CMD_HELP.update({
     "animasi":
     "`.nah` ; `.huh` ; `.owner`\
