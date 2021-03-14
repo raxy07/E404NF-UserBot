@@ -116,7 +116,7 @@ async def pingme(pong):
 async def pingme(pong):
     """ For .ping command, ping the userbot from any chat.  """
     uptime = await get_readable_time((time.time() - StartTime))
-    start = datetime.now( 𝐄𝐑𝐑𝐎𝐑 𝟒𝟎𝟒 𝐍𝐎𝐓𝐅𝐎𝐔𝐍𝐃 )
+    start = datetime.now()
     await pong.edit("`Mengecek Sinyal...`")
     await pong.edit("**0% ▒▒▒▒▒▒▒▒▒▒**")
     await pong.edit("**20% ██▒▒▒▒▒▒▒▒**")
@@ -126,7 +126,7 @@ async def pingme(pong):
     await pong.edit("**100% ██████████**")
     end = datetime.now()
     duration = (end - start).microseconds / 1000
-    await pong.edit(f"- -\n"
+    await pong.edit(f"- 𝐄𝐑𝐑𝐎𝐑 𝟒𝟎𝟒 𝐍𝐎𝐓𝐅𝐎𝐔𝐍𝐃 -\n"
                     f"**• 𝚂𝚒𝚗𝚢𝚊𝚕 :** "
                     f"`%sms` \n"
                     f"**• 𝙾𝚗𝚕𝚒𝚗𝚎  :** "
