@@ -38,7 +38,7 @@ async def variable(var):
     exe = var.pattern_match.group(1)
     if app is None:
         await var.edit("`[HEROKU]"
-                       "\nHarap Siapkan`  **HEROKU_APP_NAME**.")
+                       "\nHarap Sediakan`  **HEROKU_APP_NAME**.")
         return False
     if exe == "get":
         await var.edit("`Mendapatkan Informasi...`")
@@ -76,7 +76,7 @@ async def variable(var):
                 await var.edit("`Mohon Ubah BOTLOG Ke True`")
                 return False
     elif exe == "del":
-        await var.edit("`Menghapus Config Vars... ヅ`")
+        await var.edit("`Menghapus Config Vars...`")
         variable = var.pattern_match.group(2)
         if variable == '':
             await var.edit("`Mohon Tentukan Config Vars Yang Mau Anda Hapus`")
@@ -97,7 +97,7 @@ async def variable(var):
 
 @register(outgoing=True, pattern=r'^.set var (\w*) ([\s\S]*)')
 async def set_var(var):
-    await var.edit("`Sedang Menyetel Config Vars ヅ`")
+    await var.edit("`Sedang Menyetel Config Vars`")
     variable = var.pattern_match.group(1)
     value = var.pattern_match.group(2)
     if variable in heroku_var:
@@ -107,7 +107,7 @@ async def set_var(var):
                 "**Mengganti Config Vars**:\n"
                 f"`{variable}` = `{value}`"
             )
-        await var.edit("`Sedang Proses, Mohon Menunggu Dalam Beberapa Detik ヅ`")
+        await var.edit("`Sedang Diprosess, Mohon Tunggu Dalam Beberapa Detik `")
     else:
         if BOTLOG:
             await var.client.send_message(
@@ -129,7 +129,7 @@ async def dyno_usage(dyno):
     """
         Get your account Dyno Usage
     """
-    await dyno.edit("`Mendapatkan Informasi Dyno Heroku Anda ヅ`")
+    await dyno.edit("`Mendapatkan Informasi Dyno Heroku Anda`")
     useragent = (
         'Mozilla/5.0 (Linux; Android 10; SM-G975F) '
         'AppleWebKit/537.36 (KHTML, like Gecko) '
@@ -150,7 +150,7 @@ async def dyno_usage(dyno):
                     f"`{r.reason}`",
                     reply_to=dyno.id
                 )
-                await dyno.edit("`Tidak Bisa Mendapatkan Informasi Dyno ヅ`")
+                await dyno.edit("`Tidak Bisa Mendapatkan Informasi Dyno`")
                 return False
             result = await r.json()
             quota = result['account_quota']
@@ -179,15 +179,15 @@ async def dyno_usage(dyno):
             AppMinutes = math.floor(AppQuotaUsed % 60)
 
             await dyno.edit(
-                "**☛ Informasi Dyno**:\n\n╭━┯━━━━━━━━━━━━━━━━┯━╮\n"
-                f"✥ `Penggunaan Dyno` **{app.name}**:\n"
+                "**➤ Informasi Dyno**:\n"
+                f"✚ `Penggunaan Dyno` **{app.name}**:\n"
                 f"  ❉ **{AppHours} Jam - "
                 f"{AppMinutes} Menit  -  {AppPercentage}%**"
-                "\n ✲━─━─━─━─━─━─━─━─━─━✲\n"
+                "\n ┟─────────────────┧\n"
                 "✥ `Sisa Dyno Bulan Ini`:\n"
-                f"  ❉ **{hours} Jam - {minutes} Menit  "
+                f"  ➤ **{hours} Jam - {minutes} Menit  "
                 f"-  {percentage}%**\n"
-                "╰━┷━━━━━━━━━━━━━━━━┷━╯"
+                ""
             )
             await asyncio.sleep(20)
             await event.delete()
