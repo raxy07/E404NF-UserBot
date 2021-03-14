@@ -182,7 +182,7 @@ async def dyno_usage(dyno):
                 "**➤ Informasi Dyno**:\n"
 
                 f"  ✚ `Penggunaan Dyno` **{app.name}**:\n\n"
-                f"  ❉ ** {AppHours} Jam -
+                f"  ❉ ** {AppHours} Jam - "
                 f" {AppMinutes} Menit  -  {AppPercentage}%**"
                 "\n ┟──────────────────────┧\n"
                 "   ✥ `Sisa Dyno Bulan Ini`:\n\n"
