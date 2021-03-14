@@ -62,10 +62,10 @@ async def set_afk(afk_e):
     afk_start = start_1.replace(microsecond=0)
     if string:
         AFKREASON = string
-        await afk_e.edit(f"**ꕥ AFK!**\n**{ALIVE_NAME} Telah AFK!**\
+        await afk_e.edit(f"**ꕥ AFK!**\n**Baginda Telah AFK!**\
         \n **Alasan:** `{string}`")
     else:
-        await afk_e.edit("**ꕥ AFK!**\n**{ALIVE_NAME} Telah AFK**")
+        await afk_e.edit("**ꕥ AFK!**\n** Baginda Telah AFK**")
     if user.last_name:
         await afk_e.client(UpdateProfileRequest(first_name=user.first_name, last_name=user.last_name + "AFK"))
     else:
@@ -98,7 +98,7 @@ async def type_afk_is_not_true(notafk):
     afk_end = back_alive.replace(microsecond=0)
     if ISAFK:
         ISAFK = False
-        msg = await notafk.respond("**{ALIVE_NAME} Telah Kembali!**")
+        msg = await notafk.respond("**Baginda Telah Kembali!**")
         time.sleep(3)
         await msg.delete()
         await notafk.client(UpdateProfileRequest(first_name=user.first_name, last_name=last1))
@@ -166,7 +166,7 @@ async def mention_afk(mention):
                 afk_since = f"`{int(seconds)} Detik`"
             if mention.sender_id not in USERS:
                 if AFKREASON:
-                    await mention.reply(f"**ꕥ Baginda {ALIVE_NAME} Sedang AFK** {afk_since} **Yang Lalu.**\
+                    await mention.reply(f"**ꕥ Baginda Sedang AFK** {afk_since} **Yang Lalu.**\
                         \n➽ **Alasan:** `{AFKREASON}`")
                 else:
                     await mention.reply(str(choice(AFKSTR)))
