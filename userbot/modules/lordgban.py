@@ -1,5 +1,5 @@
 # by:Vicky @VckyouuBitch
-# Lord Userbot
+# E404NF Userbot
 
 from telethon.events import ChatAction
 from userbot import ALIVE_NAME, CMD_HELP, bot
