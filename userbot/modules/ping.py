@@ -82,7 +82,7 @@ async def pingme(pong):
     end = datetime.now()
     duration = (end - start).microseconds / 1000
     await pong.edit(f"**⌖ Pong!**\n"
-                    f"➠ __Ping:__ "
+                    f"➠ __Ping  :__ "
                     f"`%sms` \n"
                     f"➠ __Uptime:__ "
                     f"`{uptime}` \n" % (duration))
@@ -94,22 +94,23 @@ async def pingme(pong):
     uptime = await get_readable_time((time.time() - StartTime))
     start = datetime.now()
     await pong.edit("**▁**")
-    await pong.edit("**▁▂**")
-    await pong.edit("**▁▂▃**")
-    await pong.edit("**▁▂▃▄**")
-    await pong.edit("**▁▂▃▄▅**")
-    await pong.edit("**▁▂▃▄▅▆**")
-    await pong.edit("**▁▂▃▄▅▆▇**")
-    await pong.edit("**▁▂▃▄▅▆▇█**")
+    await pong.edit("**▂▁**")
+    await pong.edit("**▃▂▁**")
+    await pong.edit("**▄▃▂▁**")
+    await pong.edit("**▅▄▃▂▁**")
+    await pong.edit("**▇▅▄▃▂▁**")
+    await pong.edit("**▇▆▅▄▃▂▁**")
+    await pong.edit("**█▇▆▅▄▃▂▁**")
     await pong.edit("**PING!!!**")
     end = datetime.now()
     duration = (end - start).microseconds / 1000
-    await pong.edit(f"**𝐄𝐑𝐑𝐎𝐑 𝐏𝐈𝐍𝐆!!!**\n"
-                    f"➡ **𝐏𝐢𝐧𝐠 :** "
+    await pong.edit(f"   **𝐄𝐑𝐑𝐎𝐑 𝐏𝐈𝐍𝐆!!!**\n"
+                    f"**▬▬▬▬▬▬▬▬▬▬▬**\n"
+                    f"  ➠ **𝐏𝐢𝐧𝐠    :** "
                     f"`%sms` \n"
-                    f"➥ **𝐔𝐩𝐭𝐢𝐦𝐞 :** "
+                    f"  ➥ **𝐔𝐩𝐭𝐢𝐦𝐞  :** "
                     f"`{uptime}` \n"
-                    f"**✖ 𝐎𝐰𝐧𝐞𝐫:** `{ALIVE_NAME}`" % (duration))
+                    f"**👑 𝐎𝐰𝐧𝐞𝐫    :** `{ALIVE_NAME}`" % (duration))
 
 
 @register(outgoing=True, pattern="^.sinyal$")
@@ -127,11 +128,12 @@ async def pingme(pong):
     end = datetime.now()
     duration = (end - start).microseconds / 1000
     await pong.edit(f"- 𝐄𝐑𝐑𝐎𝐑 𝟒𝟎𝟒 𝐍𝐎𝐓𝐅𝐎𝐔𝐍𝐃 -\n"
-                    f"**• 𝚂𝚒𝚗𝚢𝚊𝚕 :** "
+                    f"**▬▬▬▬▬▬▬▬▬▬▬▬▬**\n"
+                    f"**• 𝚂𝚒𝚗𝚢𝚊𝚕  :** "
                     f"`%sms` \n"
                     f"**• 𝙾𝚗𝚕𝚒𝚗𝚎  :** "
                     f"`{uptime}` \n"
-                    f"**• 𝙾𝚠𝚗𝚎𝚛  :** `{ALIVE_NAME}`" % (duration))
+                    f"**• 𝙾𝚠𝚗𝚎𝚛   :** `{ALIVE_NAME}`" % (duration))
 
 
 @register(outgoing=True, pattern="^.speed$")
