@@ -159,7 +159,7 @@
       "required": false
     },
     "ERROR_TEKS_KUSTOM": {
-      "description": "Kustom Pesan Alive Mu Untuk Perintah .ealive (Isi Terserah)",
+      "description": "Kustom Pesan Alive Mu Untuk Perintah .error (Isi Terserah)",
       "required": false
     },
     "S_PACK_NAME": {
@@ -215,11 +215,11 @@
       "required": false
     },
     "BOT_TOKEN": {
-      "description": "Set this to enable inline bot helper. get the token from @BotFather",
+      "description": "Isi BOT TOKEN Yang Sudah Anda Buat Di @BotFather",
       "required": false
     },
     "BOT_USERNAME": {
-      "description": "Username of the bot you created with @BotFather",
+      "description": "Isi BOT USERNAME Yang Sudah Anda buat Di @BotFather",
       "required": false
     }
   },
