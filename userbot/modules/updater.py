@@ -188,7 +188,7 @@ async def upstream(event):
 
     if changelog == '' and force_update is False:
         await event.edit(
-            f'\n**✣ Lord-Userbot Sudah Versi Terbaru**\n')
+            f'\n**✣ 404NF-Userbot Sudah Versi Terbaru**\n')
         await asyncio.sleep(15)
         await event.delete()
         return repo.__del__()
@@ -208,7 +208,7 @@ async def upstream(event):
             remove("output.txt")
         else:
             await event.edit(changelog_str)
-        return await event.respond('**Perintah Untuk Update Lord Userbot**\n >`.update now`\n >`.update deploy`\n\n__Untuk Meng Update Fitur Terbaru Dari Lord Userbot.__')
+        return await event.respond('**Perintah Untuk Update E404NF Userbot**\n >`.update now`\n >`.update deploy`\n\n__Untuk Meng Update Fitur Terbaru Dari E404NF Userbot.__')
 
     if force_update:
         await event.edit(
@@ -235,7 +235,7 @@ async def upstream(event):
 CMD_HELP.update({
     'update':
     ".update"
-    "\nUsage: Untuk Melihat Pembaruan Terbaru Lord-Userbot."
+    "\nUsage: Untuk Melihat Pembaruan Terbaru E404NF-Userbot."
     "\n\n.update now"
     "\nUsage: Memperbarui E404NF-Userbot."
     "\n\n.update deploy"
