@@ -158,8 +158,8 @@
       "description": "Nama untuk menunjukan pesan .alive",
       "required": false
     },
-    "LORD_TEKS_KUSTOM": {
-      "description": "Kustom Pesan Alive Mu Untuk Perintah .lord (Isi Terserah)",
+    "ERROR_TEKS_KUSTOM": {
+      "description": "Kustom Pesan Alive Mu Untuk Perintah .ealive (Isi Terserah)",
       "required": false
     },
     "S_PACK_NAME": {
