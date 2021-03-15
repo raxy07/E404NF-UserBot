@@ -37,7 +37,7 @@ async def gbun(event):
             await reply_message.reply("`Wait a second, This is my master!`\n**How dare you threaten to ban my master nigger!**\n\n__Your account has been hacked! Pay 6969$ to my master__ [Heyworld](tg://user?id=1036951071) __to release your account__😏")
         else:
             jnl = ("`Warning!!`"
-                   "[{}](tg://user?id={})"
+                   "[{}](tg://user?id={}"
                    f"` GBANNED By` {DEFAULTUSER}\n\n"
                    "**Nama: ** __{}__\n"
                    "**ID : ** `{}`\n"
