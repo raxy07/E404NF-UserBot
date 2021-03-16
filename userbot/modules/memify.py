@@ -21,7 +21,7 @@ async def mim(event):
         return
     reply_message = await event.get_reply_message()
     if not reply_message.media:
-        await event.edit("```Mohon Balas Ke Gambar/Sticker/Gif```")
+        await event.edit("```Mohon Reply Ke Gambar/Sticker/Gif```")
         return
     reply_message.sender
     await bot.download_file(reply_message.media)
@@ -30,7 +30,7 @@ async def mim(event):
         return
     else:
         await event.edit(
-            "```Mengubah Gambar Ini Mwahaha Saatnya Menulis ツ ```"
+            "```Prosess Mengubah Gambar Dan Menambahkan Teks Ke Gambar.```"
         )
         await asyncio.sleep(5)
         text = event.pattern_match.group(1)
