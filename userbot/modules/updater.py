@@ -214,13 +214,13 @@ async def upstream(event):
         await event.edit(
             '`Sinkronisasi Paksa Ke Kode Userbot Stabil Terbaru, Harap Tunggu .....`')
     else:
-        await event.edit('`✲ Proses Update E404NF-Userbot, Loading....1%`')
-        await event.edit('`✲ Proses Update E404NF-Userbot, Loading....15%`')
-        await event.edit('`✲ Proses Update E404NF-Userbot, Loading....25%`')
-        await event.edit('`✲ Proses Update E404NF-Userbot, Loading....66%`')
-        await event.edit('`✲ Proses Update E404NF-Userbot, Loading....80%`')
-        await event.edit('`✲ Proses Update E404NF-Userbot, Loadating....95%`')
-        await event.edit('`✲ Proses Update E404NF-Userbot, Mohon Menunggu....100%`')
+        await event.edit('`Proses Update E404NF-Userbot, Loading....1%`')
+        await event.edit('`Proses Update E404NF-Userbot, Loading....15%`')
+        await event.edit('`Proses Update E404NF-Userbot, Loading....25%`')
+        await event.edit('`Proses Update E404NF-Userbot, Loading....66%`')
+        await event.edit('`Proses Update E404NF-Userbot, Loading....80%`')
+        await event.edit('`Proses Update E404NF-Userbot, Loadating....95%`')
+        await event.edit('`Proses Update E404NF-Userbot, Mohon Menunggu....100%`')
     if conf == "now":
         await update(event, repo, ups_rem, ac_br)
         await asyncio.sleep(10)
