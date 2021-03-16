@@ -13,12 +13,12 @@ async def _(event):
         return
     reply_message = await event.get_reply_message()
     if not reply_message.text:
-        await event.edit("```Mohon Balas Ke Pesan Lord```")
+        await event.edit("```Mohon Balas Ke Pesan ```")
         return
     chat = "@getidsbot"
     reply_message.sender
     if reply_message.sender.bot:
-        await event.edit("`Mohon Balas Ke Pesan Lord`")
+        await event.edit("`Mohon Balas Ke Pesan`")
         return
     await event.edit("`Mencari ID.......`")
     async with bot.conversation(chat) as conv:
@@ -33,7 +33,7 @@ async def _(event):
             await event.reply("`Bot Sedang Error`")
             return
         if response.text.startswith("Forward"):
-            await event.edit("`Lord Orang Ini Tidak Mempunyai ID`")
+            await event.edit("`Orang Ini Tidak Mempunyai ID`")
         else:
             await event.edit(f"{response.message.message}")
 
