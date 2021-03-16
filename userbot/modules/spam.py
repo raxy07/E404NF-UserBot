@@ -74,7 +74,7 @@ async def spammer(e):
     if BOTLOG:
         await e.client.send_message(
             BOTLOG_CHATID, "#DelaySPAM\n"
-            "DelaySpam was executed successfully")
+            "")
 
 
 CMD_HELP.update({
