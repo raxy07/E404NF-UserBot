@@ -1718,7 +1718,7 @@ async def faces(siwis):
     await siwis.edit(reply_text)
 
 
-@register(outgoing=True, pattern="^.koc$")
+@register(outgoing=True, pattern="^.coli$")
 async def koc(e):
     if not e.text[0].isalpha() and e.text[0] not in ("/", "#", "@", "!"):
         await e.edit("8✊===D")
@@ -1779,7 +1779,7 @@ async def emoji_penis(e):
     emoji = e.pattern_match.group(1)
     titid = GAMBAR_TITIT
     if emoji:
-        titid = titid.replace('😋', emoji)
+        titid = titid.replace('🐍', emoji)
     await e.edit(titid)
 
 
@@ -1788,7 +1788,7 @@ async def emoji_kontl(e):
     emoji = e.pattern_match.group(1)
     kontl = GAMBAR_KONTL
     if emoji:
-        kontl = kontl.replace('😂', emoji)
+        kontl = kontl.replace('😭', emoji)
     await e.edit(kontl)
 
 
@@ -1797,7 +1797,7 @@ async def emoji_oke(e):
     emoji = e.pattern_match.group(1)
     oke = GAMBAR_OK
     if emoji:
-        oke = oke.replace('😂', emoji)
+        oke = oke.replace('✨', emoji)
     await e.edit(oke)
 
 
@@ -1872,5 +1872,5 @@ CMD_HELP.update({
     "\n> `.fag` `.gtfo`; `.stfu` `.lol` `.lool` `.fail` `.leave`"
     "\n> `.iwi` `.sayhi` `.koc` `.gas` `.earth` `.love` `.rain`"
     "\n> `.penis` `.emo` `.fuck` `.skull`  `.monyet`\nUsage: Cobain aja"
-    "\n\n\n**Semoga Harimu Menyenangkan**\n➥ `Alvin`"
+    "\n\n\n**Semoga Harimu Menyenangkan**\n "
 })
