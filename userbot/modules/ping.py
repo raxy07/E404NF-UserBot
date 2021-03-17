@@ -117,8 +117,7 @@ async def pingme(pong):
                     f"`%sms` \n"
                     f"**➾ 𝐎𝐍𝐋𝐈𝐍𝐄  :** "
                     f"`{uptime}` \n"
-                    f"**➾ 𝐎𝐖𝐍𝐄𝐑: **
-                    f"`{ALIVE_NAME}`" % (duration))
+                    f"**➾ 𝐎𝐖𝐍𝐄𝐑  :** `{ALIVE_NAME}`" % (duration))
 
 
 @register(outgoing=True, pattern="^.sinyal$")
