@@ -63,7 +63,7 @@ async def set_afk(afk_e):
     if string:
         AFKREASON = string
         await afk_e.edit(f"**𝙰 𝙵 𝙺 !**\n**𝚂𝚎𝚍𝚊𝚗𝚐 𝙰𝙵𝙺**\
-        \n**Alasan:** `{string}`")
+        \n𝗞𝗮𝗿𝗲𝗻𝗮 : `{string}`")
     else:
         await afk_e.edit("**𝙰 𝙵 𝙺 !**\n**𝚂𝚎𝚍𝚊𝚗𝚐 𝙰𝙵𝙺**")
     if user.last_name:
@@ -159,15 +159,15 @@ async def mention_afk(mention):
                     wday = now + datetime.timedelta(days=-days)
                     afk_since = wday.strftime('%A')
             elif hours > 1:
-                afk_since = f"`{int(hours)} Jam {int(minutes)} Menit`"
+                afk_since = f"`{int(hours)}` **𝙹𝚊𝚖** `{int(minutes)}` **𝙼𝚎𝚗𝚒𝚝**"
             elif minutes > 0:
-                afk_since = f"`{int(minutes)} Menit {int(seconds)} Detik`"
+                afk_since = f"`{int(minutes)}` **𝙼𝚎𝚗𝚒𝚝** `{int(seconds)}` **𝙳𝚎𝚝𝚒𝚔**"
             else:
-                afk_since = f"`{int(seconds)} Detik`"
+                afk_since = f"`{int(seconds)}` **𝙳𝚎𝚝𝚒𝚔**"
             if mention.sender_id not in USERS:
                 if AFKREASON:
-                    await mention.reply(f"**𝙼𝚊𝚊𝚏 𝚂𝚊𝚢𝚊 𝚂𝚎𝚍𝚊𝚗𝚐 𝙰𝙵𝙺!** {afk_since} **𝚈𝚊𝚗𝚐 𝙻𝚊𝚕𝚞.**\
-                        \n➽ 𝙺𝚊𝚛𝚎𝚗𝚊 `{AFKREASON}`")
+                    await mention.reply(f"**𝙼𝚊𝚊𝚏 𝚂𝚊𝚢𝚊 𝚂𝚎𝚍𝚊𝚗𝚐 𝙰𝙵𝙺!** `{afk_since}` *"𝚈𝚊𝚗𝚐 𝙻𝚊𝚕𝚞.**\
+                        \n**➽ 𝙺𝚊𝚛𝚎𝚗𝚊** `{AFKREASON}`")
                 else:
                     await mention.reply(str(choice(AFKSTR)))
                 USERS.update({mention.sender_id: 1})
@@ -176,7 +176,7 @@ async def mention_afk(mention):
                 if USERS[mention.sender_id] % randint(2, 4) == 0:
                     if AFKREASON:
                         await mention.reply(f"**𝚂𝚎𝚍𝚊𝚗𝚐 𝙰𝙵𝙺!** {afk_since} **𝚈𝚊𝚗𝚐 𝙻𝚊𝚕𝚞.**\
-                            \n➽ 𝙺𝚊𝚛𝚎𝚗𝚊 `{AFKREASON}`")
+                            \n**➽ 𝙺𝚊𝚛𝚎𝚗𝚊** `{AFKREASON}`")
                     else:
                         await mention.reply(str(choice(AFKSTR)))
                     USERS[mention.sender_id] = USERS[mention.sender_id] + 1
@@ -202,7 +202,7 @@ async def afk_on_pm(sender):
     user = await bot.get_me()  # pylint:disable=E0602
     back_alivee = datetime.now()
     afk_end = back_alivee.replace(microsecond=0)
-    afk_since = "**𝙱𝚎𝚕𝚞𝚖 𝙻𝚊𝚖𝚊**"
+    afk_since = "𝙱𝚎𝚕𝚞𝚖 𝙻𝚊𝚖𝚊"
     if sender.is_private and sender.sender_id != 777000 and not (
             await sender.get_sender()).bot:
         if PM_AUTO_BAN:
@@ -240,11 +240,11 @@ async def afk_on_pm(sender):
             elif minutes > 0:
                 afk_since = f"`{int(minutes)}` **𝙼𝚎𝚗𝚒𝚝** `{int(seconds)}` **𝙳𝚎𝚝𝚒𝚔**"
             else:
-                afk_since = f"`{int(seconds)} Detik`"
+                afk_since = f"`{int(seconds)} 𝙳𝚎𝚝𝚒𝚔`"
             if sender.sender_id not in USERS:
                 if AFKREASON:
-                    await sender.reply(f"𝙼𝚊𝚊𝚏 𝚂𝚊𝚢𝚊 𝚂𝚎𝚍𝚊𝚗𝚐 𝙰𝙵𝙺!* `{afk_since}` **𝚈𝚊𝚗𝚐 𝙻𝚊𝚕𝚞**.\
-                        \n**➽ Alasan `{AFKREASON}`")
+                    await sender.reply(f"**𝙼𝚊𝚊𝚏 𝚂𝚊𝚢𝚊 𝚂𝚎𝚍𝚊𝚗𝚐 𝙰𝙵𝙺!** `{afk_since}` **𝚈𝚊𝚗𝚐 𝙻𝚊𝚕𝚞.**.\
+                        \n**➽ Alasan** `{AFKREASON}`")
                 else:
                     await sender.reply(str(choice(AFKSTR)))
                 USERS.update({sender.sender_id: 1})
@@ -253,7 +253,7 @@ async def afk_on_pm(sender):
                 if USERS[sender.sender_id] % randint(2, 4) == 0:
                     if AFKREASON:
                         await sender.reply(f"**𝙼𝚊𝚊𝚏 𝚂𝚊𝚢𝚊 𝚂𝚎𝚍𝚊𝚗𝚐 𝙰𝙵𝙺!** {afk_since} **Yang Lalu.**\
-                            \n**➽ Alasan `{AFKREASON}`")
+                            \n**➽ Alasan** `{AFKREASON}`")
                     else:
                         await sender.reply(str(choice(AFKSTR)))
                     USERS[sender.sender_id] = USERS[sender.sender_id] + 1
