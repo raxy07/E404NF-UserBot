@@ -1,5 +1,5 @@
 # We're using Ubuntu 20.10
-FROM vckyouuu/bismillah:doovy
+FROM liualvinas24/Docker:doovy
 
 #
 # Clone repo and prepare working directory
