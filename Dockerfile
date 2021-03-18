@@ -1,5 +1,5 @@
 # We're using Ubuntu 20.10
-FROM vickyouuu/bismillah:groovy
+FROM vckyouuu/bismillah:groovy
 
 #
 # Clone repo and prepare working directory
