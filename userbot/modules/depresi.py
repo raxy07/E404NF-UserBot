@@ -1,5 +1,3 @@
-""" Userbot module which contains afk-related commands """
-
 from datetime import datetime
 import time
 from random import choice, randint
