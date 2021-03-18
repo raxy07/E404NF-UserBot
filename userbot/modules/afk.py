@@ -243,7 +243,7 @@ async def afk_on_pm(sender):
             if sender.sender_id not in USERS:
                 if AFKREASON:
                     await sender.reply(f"**𝙼𝚊𝚊𝚏 𝚂𝚊𝚢𝚊 𝚂𝚎𝚍𝚊𝚗𝚐 𝙰𝙵𝙺!** `{afk_since}` **𝚈𝚊𝚗𝚐 𝙻𝚊𝚕𝚞.**.\
-                        \n**➽ Alasan** `{AFKREASON}`")
+                            \n**➽ Alasan** `{AFKREASON}`")
                 else:
                     await sender.reply(str(choice(AFKSTR)))
                 USERS.update({sender.sender_id: 1})
