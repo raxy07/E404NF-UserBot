@@ -1,5 +1,5 @@
 # We're using Ubuntu 20.10
-FROM vckyouuu/allahuakbar:groovy
+FROM vckyouuu/docker:groovy
 
 #
 # Clone repo and prepare working directory
