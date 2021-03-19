@@ -1,5 +1,5 @@
 # We're using Ubuntu 20.10
-FROM vckyouuu/vckyyy:latest
+FROM vckyouuu/allahuakbar:groovy
 
 #
 # Clone repo and prepare working directory
