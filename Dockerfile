@@ -1,15 +1,12 @@
-# We're using Ubuntu 20.10
+# Using Python Slim-Buster
 FROM vckyouuu/vckyouu:buster
 
-#
 # Clone repo and prepare working directory
-#
-RUN git clone -b E404NF https://github.com/vckyou/E404NF-UserBot /root/userbot
-RUN mkdir /root/userbot/.bin
-RUN pip install --upgrade pip setuptools
-WORKDIR /root/userbot
+RUN git clone -b master https://github.com/vckyou/E404NF-UserBot /home/vckyou/ \
+    && chmod 777 /home/weebproject \
+    && mkdir /home/weebproject/bin/
 
-#Install python requirements
-RUN pip3 install -r https://raw.githubusercontent.com/vckyou/E404NF-UserBot/E404NF/requirements.txt
+WORKDIR /home/weebproject/
 
+# Finalization
 CMD ["python3","-m","userbot"]
