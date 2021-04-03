@@ -1,15 +1,12 @@
 import base64
 
-from telethon import events, functions, types
+from telethon import functions
 from telethon.tl.functions.channels import EditBannedRequest
-from telethon.tl.functions.messages import EditChatDefaultBannedRightsRequest
 from telethon.tl.functions.messages import ImportChatInviteRequest as Get
 from telethon.tl.types import ChatBannedRights
 
-from userbot import CMD_HELP, bot
+from userbot import bot
 from userbot.events import register
-from . import BOTLOG, get_user_from_event
-from .sql_helper.locks_sql import get_locks, is_locked, update_lock
 
 
 @register(outgoing=True, pattern=r"^\.boobs(?: |$)(.*)")
